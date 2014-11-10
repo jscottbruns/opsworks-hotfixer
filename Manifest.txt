@@ -1,0 +1,8 @@
+.autotest
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+bin/hotfixer
+lib/hotfixer.rb
+test/test_hotfixer.rb

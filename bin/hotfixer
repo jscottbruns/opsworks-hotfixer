@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+$LOAD_PATH << File.expand_path("#{__FILE__}/../../lib")
+require 'hotfixer/cli'
+
+begin
+  cli = Hotfixer::CLI.instance
+  cli.parse
+  cli.run
+rescue => e
+  raise e if $DEBUG
+  STDERR.puts e.message
+  STDERR.puts e.backtrace.join("\n")
+  exit 1
+end
